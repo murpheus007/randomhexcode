@@ -6,15 +6,22 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+
+ }
+ html {
+    font-size: 16px;
+ }
+ body {
+    font-size: 1rem;
  }
 
  .generator_app {
-    width: fit-content;
+    width: calc(100% - 5rem);
     height: auto;
     background-color: white;
     box-shadow: .5rem .5rem 5px black;
     border: 1px solid black;
-    padding: 3rem;
+    padding: 3rem 0;
     margin: 10% auto;
     border-radius: 1rem;
 
@@ -26,14 +33,18 @@
  }
 
  .page_title {
+    width: calc(100% - 3rem);
     font-size: .8rem;
     background-color: black;
     color: white;
     padding: 1rem 2rem;
+    text-align: center;
     border-radius: .5rem;
+
  }
 
  .col_gen_con {
+    width: calc(100% - 3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,11 +55,11 @@
  .col_box_con {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
  }
 
- .col_box_con > * {
+ .box {
     font-size: .6rem;
     color: white;
     background-color: black;
@@ -72,4 +83,10 @@
 button:active {
     box-shadow: none;
     transform: translate(5px, 5px);
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 10px;
+    }
 }
